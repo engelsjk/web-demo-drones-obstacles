@@ -6,7 +6,7 @@ Drone Obstacles
 
 WHAT IS IT
 ==========
-This demo is a simple Leaflet map of all recorded FAA obstacles greater than 200 feet above ground in the state of Oregon. Filter different obstacle types (power lines, lighthouses, wind turbines, etc) by clicking on the various icons on the left. Zoom out to see all of the obstacles in the state of Oregon.
+This demo is a simple Leaflet map of all recorded FAA obstacles greater than 200 feet above ground in the state of Oregon. Filter different obstacle types (power lines, lighthouses, wind turbines, etc) by clicking on the various icons on the left. Zoom out to see all of the obstacles in the state of Oregon. Click on an obstacle icon on the map to see more information (actual height, coordinates, markings/lighting, etc).
 
 MOTIVATION
 ==========
