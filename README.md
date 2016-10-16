@@ -2,7 +2,7 @@
 
 Drone Obstacles
 
-![Alt text](/images/screenshot.png?raw=true "Drone Obstacles")
+![Alt text](/screenshot.png?raw=true "Drone Obstacles")
 
 Working in the wind industry, you get used to working with large obstacles. With modern wind turbines and meteorological towers easily exceeding 250 feet, it's no surprise that the FAA plays a large role in the wind industry in terms of keeping our airspace safe for aviators. To do this, the FAA maintains a Digital Obstacle File (DOF) which is a record of all obstacles over 200 feet above ground level. The DOF is an interesting dataset which tracks tall structures such as wind turbines, bridges, power plants, even tall trees.
 
