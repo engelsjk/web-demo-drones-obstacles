@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAA Obstacles</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- End Meta -->
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="libraries/leaflet/css/leaflet.css" />
+  <link rel="stylesheet" href="libraries/simplemodal/css/basic.css" />
+  <link rel="stylesheet" href="libraries/fontawesome/css/font-awesome.min.css" />
+  <!-- End CSS Libraries -->
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- End Main CSS -->
+
+</head>
+
+<body>
+
+  <!-- Main Container -->
+  <div id="main">
+
+    <!-- Sidebar -->
+    <input id="slide-sidebar" type="checkbox" role="button" />
+    <label for="slide-sidebar"><i class="fa fa-chevron-left"></i></label>
+    <!-- End Sidebar -->
+
+    <!-- Legend -->
+    <div class="legend-container">
+      <ul class="legend-content"></ul>
+    </div>
+    <!-- End Legend -->
+
+    <!-- Map -->
+    <div id="map"></div>
+    <!-- End Map -->
+
+  </div> 
+  <!-- End Main Container -->
+
+  <!-- Title Bar -->
+  <div id="title">
+    <span>FAA Obstacles <i class="fa fa-question-circle" onClick="openModal()"></i></span>
+  </div>
+  <!-- End Title Bar -->
+
+  <!-- Modal Info -->
+  <div id="basic-modal-content">
+
+    <h3>FAA Obstacles Map - Oregon</h3>
+
+    <p><b>What?</b> A map of structures listed in the FAA's Digital Obstacle File (DOF) for the state of Oregon. The DOF is a publicly available database of "all known obstacles of interest to aviation users in the United States", specifically all structures over 200 feet tall or any other structures that could affect navigable airspace.</p>
+
+    <p><b>Why?</b> The purpose of this demo is to show the locations and relevant information of structures considered to be aeronautical obstacles in the FAA's DOF database. This data can be used to help inform UAS flight planning by adding awareness of obstacles that could impact safe and successful operations.</p>
+
+    <p><b>How?</b> Click on the X to close this window. Clicking on an obstacle marker will open a pop-up with more information about the selected obstacle. Also, you can filter by obstacle type using the icons on the left.</p>
+  
+    <p>
+      <b>More Information...</b>
+      <ul>
+        <li><a href="http://www.faa.gov/air_traffic/flight_info/aeronav/obst_data/" target="_blank">FAA Aeronautical Information Servives - Obstacle Data</li>
+        <li><a href="http://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dof/" target="_blank">More details on the FAA Digital Obstacle File</a></li>
+        <li><a href="https://www.faa.gov/uas/" target="_blank">Info about FAA Unmanned Aircraft Systems</a></li>
+      </ul>
+    </p>
+
+    <p>Created by <a href="http://jonengelsman.com/" target="_blank">Jon Engelsman</a></p>
+
+  </div>
+  <!-- End Modal Info -->
+
+  <!-- Preload Modal Image -->
+  <div style='display:none'>
+    <img src='libraries/simplemodal/img/x.png' alt='' />
+  </div>
+  <!-- End Preload Modal Image -->
+
+  <!-- Javascript Libraries -->
+  <script src="libraries/leaflet/js/leaflet.js"></script>
+  <script src="libraries/leaflet/js/esri-leaflet-1.0.2.min.js"></script>
+  <script src="libraries/jquery/js/jquery-1.12.0.min.js"></script>
+  <script src='libraries/simplemodal/js/jquery.simplemodal.js'></script>
+  <script src="libraries/underscore/js/underscore.min.js"></script>
+  <!-- End Javascript Libraries -->
+
+  <!-- Main Javascript -->
+  <script src="js/main.js"></script>
+  <!-- End Main Javasciprt -->
+
+  <!-- Obstacle Data -->
+  <script src="data/41-OR_update.js"></script>
+  <!-- End Obstacle Data -->
+
+  <!-- Initialization Javascript -->
+  <script>
+
+    // On document ready...
+    $(document).ready(function(){
+
+      openModal();    // Open Modal Info
+      initMap();      // Initialize Map
+      initMarkers();  // Initializa Obstacle Markers
+      createLegend(); // Create Obstacle Type Legend 
+      initControls(); // Initialize Legend Controls
+
+    })
+
+  </script>
+  <!-- End Initialization Javascript -->
+
+</body>
+</html>
+
+ <!-- REFERENCES
+
+Basic Leaflet Setup: http://leafletjs.com/examples/quick-start-example.html '
+Custom Popup Styling: https://www.mapbox.com/mapbox.js/example/v1.0.0/custom-popup-style/
+Modal Popup: http://www.ericmmartin.com/projects/simplemodal/
+Sidebar Toggle: http://codepen.io/ScintillaLuz/pen/HxzED
+Chevron Flip: http://jsfiddle.net/pjQP7/10/
+
+-->
